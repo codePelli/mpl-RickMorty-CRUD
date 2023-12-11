@@ -1,0 +1,34 @@
+@if (characterDetails) {
+    <div class="col-md-12">
+        <div class="card mb-4" id="detailCard">
+            <img [src]="characterDetails.image" class="card-img-top" alt="{{ characterDetails.name }}">
+            <h2 class="card-title">{{ characterDetails.name }}</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" placeholder="Name" [(ngModel)]="character.name" class="form-control">
+            </div>
+            <p class="card-text">Gender: {{ characterDetails.gender | uppercase }}</p>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <input type="text" placeholder="Gender" [(ngModel)]="character.gender" class="form-control">
+            </div>
+            <p class="card-text">Species: {{ characterDetails.species | uppercase }}</p>
+            <div class="mb-3">
+                <label for="species" class="form-label">Species</label>
+                <input type="text" placeholder="Species" [(ngModel)]="character.species" class="form-control">
+            </div>
+            <p class="card-text">Status: {{ characterDetails.status | uppercase }}</p>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <input type="text" placeholder="Status" [(ngModel)]="character.status" class="form-control">
+            </div>
+            <p class="card-text">Origin: {{ characterDetails.origin.name | uppercase }}</p>
+            <div class="mb-3">
+                <label for="origin" class="form-label">Origin</label>
+                <input type="text" placeholder="Origin" [(ngModel)]="character.origin" class="form-control">
+            </div>
+            <button type="button" class="btn btn-primary" (click)="saveChanges()">Save Changes</button>
+            <button type="button" class="btn btn-danger" (click)="deleteCharacter()">Delete Character</button>
+        </div>
+    </div>
+}

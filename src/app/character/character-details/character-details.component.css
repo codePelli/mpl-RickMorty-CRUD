@@ -1,0 +1,30 @@
+body{
+    width: 100vh;
+    height: 100vh;
+}
+
+.col-md-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#detailCard{
+    max-width: 400px;
+}
+
+.card{
+    font-family: HandFont;
+}
+
+.card-title{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.card-text{
+    font-size: 25px;
+}
+

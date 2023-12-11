@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <div class="row">
+        @for (character of characters; track $index) 
+        {
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img [src]="character.image" class="card-img-top" alt="{{ character.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ character.name }}</h5>
+                        <a [routerLink]="['/character-details', character.id]" class="btn btn-warning w-100">More info</a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

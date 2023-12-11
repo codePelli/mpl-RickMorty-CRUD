@@ -1,0 +1,35 @@
+.about-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f9fa;
+    font-family: HandFont;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-size: 70px
+}
+
+p{
+    font-size: 30px
+
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.text-content {
+    font-size: 18px;
+    line-height: 1.6;
+}

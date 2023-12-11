@@ -1,0 +1,51 @@
+<div class="container mt-4">
+    <h2>Add Character</h2>
+    <form (submit)="saveCharacter()">
+        <div class="mb-3">
+            <label for="name" class="form-label">ID</label>
+            <input type="text" class="form-control" id="ID" [(ngModel)]="character.id" name="formID" required>
+            <div class="invalid-feedback">Please enter the ID</div>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="character.name" name="formName" required>
+            <div class="invalid-feedback">Please enter the character's name</div>
+        </div>
+        <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" id="gender" [(ngModel)]="character.gender" name="formGender" required>
+                <option value="" disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <div class="invalid-feedback">Please select the character's gender</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="species" class="form-label">Species</label>
+            <input type="text" class="form-control" id="formSpecies" [(ngModel)]="character.species" name="species"
+                required>
+            <div class="invalid-feedback">Please enter the character's species</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select class="form-select" id="formStatus" [(ngModel)]="character.status" name="status" required>
+                <option value="" disabled>Select Status</option>
+                <option value="dead">Dead</option>
+                <option value="alive">Alive</option>
+                <option value="missing">Unknown</option>
+            </select>
+            <div class="invalid-feedback">Please select the character's status</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="origin" class="form-label">Origin</label>
+            <input type="text" class="form-control" id="formOrigin" [(ngModel)]="character.origin" name="origin"
+                required>
+            <div class="invalid-feedback">Please enter the character's origin</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">SAVE</button>
+    </form>
+</div>
