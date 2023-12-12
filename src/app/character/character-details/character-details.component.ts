@@ -43,7 +43,8 @@ export class CharacterDetailsComponent implements OnInit{
   }
 
   saveChanges() {
-    this.charService.updateCharacter(this.characterId, this.characterDetails).subscribe(
+    console.log(this.character);
+    this.charService.updateCharacter(this.characterId, this.character).subscribe(
       (response) => {
         console.log('Character updated successfully:', response);
         this.characterDetails.resetForm;

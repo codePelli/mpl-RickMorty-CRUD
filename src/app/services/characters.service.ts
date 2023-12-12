@@ -32,6 +32,7 @@ export class CharactersService {
 
   updateCharacter(id: number, updatedCharacter: any): Observable<any> {
     let characterUrl = `${this.apiUrl}/${id}`;
+    console.log(updatedCharacter);
     return this.http.put<any>(characterUrl, updatedCharacter);
   }
 
